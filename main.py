@@ -1,7 +1,7 @@
 # main.py
-import json, sys
-from core.normalizer import normalize
-p = sys.argv[1] if len(sys.argv)>1 else 'logs/demo_bruteforce.json'
-raw = json.load(open(p))
-evt = normalize(raw)
-print("Normalized event:", evt)
+from core.utils import load_config
+
+if __name__ == "__main__":
+    config = load_config('config.yaml')
+    print("Configuration loaded successfully:")
+    print(config)
