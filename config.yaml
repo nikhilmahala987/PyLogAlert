@@ -1,4 +1,4 @@
 log_sources:
   linux_secure: /var/log/secure # or auth.log depending on your system
   windows_evtx: C:\Users\nikhi\OneDrive\Desktop\Camera_DeviceMFT.evtx
-  firewall_log: ./logs/firewall.log
+  firewall_log: C:\Users\nikhi\OneDrive\Desktop\Cyber\Github\mini-soar-project\logs\firewall.log
