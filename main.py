@@ -3,22 +3,31 @@ import json
 from core.utils import load_config
 from core.collector import read_log_file
 from core.parser import parse_log_line
+from core.analyzer import analyze_log
 
 if __name__ == "__main__":
     config = load_config('config.yaml')
     log_file_path = config['log_sources']['firewall_log']
+
+    print(f"--- Starting analysis of {log_file_path} ---")
+
     log_generator = read_log_file(log_file_path)
+
+    # Process each log line
     for line in log_generator:
-        # # line=line.strip()
-
-        # # 4. Try to parse the line using your parser (Day 4)
         parsed_log = parse_log_line(line)
-
-        # 5. Check the result and print
+        print(json.dumps(parsed_log, indent=4))
+        # If the parser returns a valid dictionary (not None)...
         if parsed_log:
-            # If the parser returns a dictionary, print it nicely
-            print("\n✅ Parsed Log Entry:")
-            print(json.dumps(parsed_log, indent=4))
-        else:
-            # If the parser returns None, print the raw line
-            print(f"\n❌ Could not parse line: '{line}'")
+            analysis_result = analyze_log(parsed_log)
+
+            # If the analyzer triggered a rule...
+            if analysis_result['triggered']:
+                # ...print a formatted alert!
+                print("\n" + "─" * 40)
+                print(f"🚨 ALERT! Rule '{analysis_result['rule_name']}' triggered.")
+                print("─" * 40)
+                print(json.dumps(parsed_log, indent=4))
+                print("─" * 40 + "\n")
+
+    print("--- Analysis complete ---")
