@@ -11,7 +11,9 @@ def analyze_log(parsed_log):
         # If both conditions are true, we return the alert dictionary.
         return {
             'triggered': True,
-            'rule_name': 'SSHD Failed Login'
+            'rule_name': 'SSHD Failed Login',
+            'playbook': 'notify_slack.py', # <-- Add this line
+            'log_data': parsed_log # Also include the original log data
         }
 
     return {'triggered': False}
