@@ -84,6 +84,6 @@ If you find bugs, have ideas, or want to improve it:
 > ---
 ## Author
 
-**Made with ❤️ by [Nikhil Mahala](https://github.com/nikhilmahala987?utm_source=chatgpt.com)**
+**Made with ❤️ by [Nikhil Mahala](https://github.com/nikhilmahala987)**
 
 If you find this project helpful, don’t forget to ⭐ **star the repo**!
