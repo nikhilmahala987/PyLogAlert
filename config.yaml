@@ -1,6 +1,0 @@
-log_sources:
-  linux_secure: /var/log/secure # or auth.log depending on your system
-  windows_evtx: C:\Users\nikhi\OneDrive\Desktop\Camera_DeviceMFT.evtx
-  firewall_log: C:\Users\nikhi\OneDrive\Desktop\Cyber\Github\mini-soar-project\logs\firewall.log
-
-slack_webhook_url: "https://hooks.slack.com/services/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"
