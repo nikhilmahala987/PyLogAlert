@@ -1,0 +1,9 @@
+rule_name: "SSHD Failed Login"
+description: "Detects a failed SSH login attempt."
+log_source: "sshd" 
+
+detection:
+  keywords:
+    - "Failed password"
+
+playbook: "notify_slack.py"
