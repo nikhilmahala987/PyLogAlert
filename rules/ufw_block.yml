@@ -1,0 +1,9 @@
+rule_name: "UFW Firewall Block"
+description: "Detects a packet being blocked by the UFW firewall."
+log_source: "kernel" 
+
+detection:
+  keywords:
+    - "[UFW BLOCK]"
+
+playbook: "notify_slack.py"

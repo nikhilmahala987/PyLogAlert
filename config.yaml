@@ -3,4 +3,4 @@ log_sources:
   windows_evtx: C:\Users\nikhi\OneDrive\Desktop\Camera_DeviceMFT.evtx
   firewall_log: C:\Users\nikhi\OneDrive\Desktop\Cyber\Github\PyLogAlert\logs\firewall.log
 
-slack_webhook_url: "https://hooks.slack.com/services/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"
+slack_webhook_url: "your/slack/url/for/msg/receving"
