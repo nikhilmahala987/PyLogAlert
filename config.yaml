@@ -1,6 +1,6 @@
 log_sources:
   linux_secure: /var/log/secure # or auth.log depending on your system
-  windows_evtx: C:\Users\nikhi\OneDrive\Desktop\Camera_DeviceMFT.evtx
-  firewall_log: C:\Users\nikhi\OneDrive\Desktop\Cyber\Github\PyLogAlert\logs\firewall.log
+  windows_evtx: your\log\location
+  firewall_log: c:logs\firewall.log
 
-slack_webhook_url: "your/slack/url/for/msg/receving"
+slack_webhook_url: "your/slack/url/for/notificatoin"
