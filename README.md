@@ -1,5 +1,7 @@
 # PyLogAlert 🛡️
 
+![PyLogAlert Demo](pylogalert-demo.gif)
+
 **PyLogAlert** is a lightweight, real-time log analysis and alerting engine written in Python.  
 It monitors log files for suspicious patterns, parses them into a structured format, and sends **rich, interactive notifications** to Slack.
 
